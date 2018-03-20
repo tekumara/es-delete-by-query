@@ -1,0 +1,26 @@
+group 'tukushan'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'scala'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.scala-lang:scala-library:${scalaVersion}"
+    compile "org.scalatest:scalatest_${scalaBuildVersion}:3.0.5"
+    compile "org.elasticsearch:elasticsearch:2.3.2"
+    compile "net.databinder.dispatch:dispatch-core_${scalaBuildVersion}:0.11.3"
+    compile "joda-time:joda-time:2.3"
+    compile "org.json4s:json4s-jackson_${scalaBuildVersion}:3.4.1"
+    compile "org.json4s:json4s-ext_${scalaBuildVersion}:3.4.1"
+    compile "ch.qos.logback:logback-classic:1.0.13"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+    distributionType = Wrapper.DistributionType.ALL
+}
