@@ -11,4 +11,4 @@ Unlike the plugin, it does not have timeout functionality, and the response does
 
 It's written using [dispatch](https://github.com/dispatch/reboot) Futures but is actually sequential, nothing happens in parallel.
 
-A large number of delete operations hurts concurrent read performance. Consider building a new index and changing flipping an alias instead, particularly if a delete will touch every document.
+A large number of delete operations hurts concurrent read performance. Consider building a new index and flipping an alias instead, particularly if a delete will touch every document.
